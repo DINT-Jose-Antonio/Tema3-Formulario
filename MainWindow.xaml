@@ -6,6 +6,19 @@
         xmlns:local="clr-namespace:Tema3_Formulario"
         mc:Ignorable="d"
         Title="Formulario" Height="660" Width="1092" Icon="assets/check-form_116472.ico">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Margin" Value="5"></Setter>
+        </Style>
+        <Style TargetType="{x:Type GroupBox}">
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Header" Value="100"></Setter>
+            <Setter Property="Width" Value="180"></Setter>
+        </Style>
+
+    </Window.Resources>
     <DockPanel>
         <TextBlock DockPanel.Dock="Top" Height="70" HorizontalAlignment="Center" FontSize="36" FontWeight="Bold">Formulario</TextBlock>
 
@@ -20,8 +33,8 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="0" VerticalAlignment="Center">Jose Antonio</TextBlock>
-            <Button Grid.Column="1" Margin="5">Aceptar</Button>
-            <Button Grid.Column="2" Margin="5">Cancelar</Button>
+            <Button Grid.Column="1">Aceptar</Button>
+            <Button Grid.Column="2">Cancelar</Button>
         </Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -41,7 +54,7 @@
                 </Border.Effect>
 
                 <StackPanel  Orientation="Horizontal">
-                    <GroupBox Header="Aficiones" Height="100" Width="180" BorderBrush="Blue" Margin="5">
+                    <GroupBox Header="Aficiones" BorderBrush="Blue">
                         <StackPanel Margin="5">
                             <CheckBox Content="Hacer deporte"/>
                             <CheckBox Content="Viajar"/>
@@ -49,7 +62,7 @@
                             <CheckBox Content="Leer comics"/>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox Header="Estado Civil" Height="100" Width="180" Margin="5" BorderBrush="Blue">
+                    <GroupBox Header="Estado Civil" BorderBrush="Blue">
                         <StackPanel Margin="5">
                             <RadioButton Content="Soltero"/>
                             <RadioButton Content="Casado"/>
